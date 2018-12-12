@@ -1,0 +1,64 @@
+﻿
+
+.chitietsp{overflow: hidden;background:white;padding:5px}
+.baosp{height:550px;width:350px;float:left;border:1px solid #808080}
+.imgsp{height:550px;width:350px}
+.baochitiet{overflow: hidden;width:323px;float:left;padding-left:17px;font-family:arial;}
+.product-title h1{margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 3px;
+    text-transform: capitalize;}
+
+.product-price{border-bottom: 1px solid #ccc;
+    padding-bottom: 12px;
+    margin-top: 10px;}
+.product-price span{font-size: 24px;
+    color: #ff6517;
+    margin-right: 25px;}
+.thongtin{overflow: hidden;padding-top:10px}
+
+.row{overflow: hidden;padding-top:30px}
+.giohangsp {
+    width: 45%;
+    float: left;
+    padding-right: 31px;
+}
+button a{
+    text-decoration:none;
+    color:white;
+}
+
+.btn-color-add {
+    background: #e05543;
+    width: 100%;
+    margin: 10px 0;
+}
+
+
+.btn-detail {
+    border: none;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 3px;
+    height: 44px;
+    line-height: 44px;
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.muangay {
+    width: 45%;
+    float: left
+}
+
+.btn-color-buy {
+    background: #ff822e;
+    cursor: pointer;
+    width: 100%;
+    margin: 10px 0;
+}
+

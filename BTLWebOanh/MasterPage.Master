@@ -1,0 +1,207 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="BTLWebOanh.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Đồng hồ online</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/index.css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/TimKiem.js"></script>
+   
+</head>
+<body>
+    <%--dòng kẻ xấu xí bên trên đầu trang--%>
+    <div id="dongke"></div>
+    <!--đầu trang-->
+    <div id="dautrang">
+        <div class="contener">
+            <div id="logo">
+                <div id="logochu">
+                    <div id="anh1"></div>
+                </div>
+                <div id="logoanh">
+                    <div id="anh2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--menu đầu trang-->
+    <div id="menudautrang">
+        <div class="contener">
+            <div id="menutrai">
+                <ul class="menungang">
+                    <li class="menu1"><a href="/Index.aspx">TRANG CHỦ</a></li>
+                    <li class="menu1"><a href="/ThongTin.aspx">GIỚI THIỆU</a></li>
+                    <li class="menu1"><a href="#">TIN TỨC</a></li>
+                    <li class="menu1"><a href="#">LIÊN HỆ</a></li>
+                    <li class="menu1"><a href="#">THANH TOÁN</a></li>
+                </ul>
+            </div>
+            <div id="dangnhap">
+                <asp:Literal ID="ltrDangNhap" runat="server"></asp:Literal>
+                <%--<ul>
+                    <li class="dangnhap1">/<a href="#">Đăng ký</a></li>
+                    <li class="dangnhap2"><a href="#">Đăng nhập</a></li>
+                </ul>--%>
+            </div>
+        </div>
+    </div>
+    <!--thanh tìm kiếm + giỏ hàng-->
+    <div id="timkiem">
+        <div class="contener">
+            <div <%--id="timkiem"--%>>
+                <div class="timkiemphai">
+                    <div class="giohang">
+                        <a href="/GioHang.aspx">
+                            <div id="cart"></div>
+                        </a>
+                    </div>
+                    <div class="hotline">
+                        <div class="label">HOTLINE</div>
+                        <div class="number">0379093280</div>
+                    </div>
+                    <div class="otimkiem">
+                        <div class="search">
+                            <form onsubmit="return checksearchForm();" id="searchForm" name="searchForm" method="post" action="/Search.aspx">
+                                <input type="text" class="key" placeholder="Từ khóa tìm kiếm" value="" name="timkiem" id="keysearch">
+                                <input type="submit" value="Tìm kiếm" class="submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--thân trang-->
+    <div id="thantrang">
+        <div class="contener">
+            <div id="trangtrai">
+                <div id="danhmuc">
+                    <div class="daumuc"><a>DANH MỤC SẢN PHẨM</a></div>
+                    <div class="ditmuc">
+                        <ul>
+                            <li><a href="/Hangx/AnneKlein.aspx">Anne Klein Watches</a></li>
+                            <li><a href="/Hangx/AriesGold.aspx">Aries Gold Watches</a></li>
+                            <li><a href="/Hangx/ArmaniExchange.aspx">Armani Exchange Watches</a></li>
+
+                            <li><a href="/Hangx/Casio.aspx">Casio Watches</a></li>
+                            <li><a href="/Hangx/Citizen.aspx">Citizen Watches</a></li>
+                            <li><a href="#">Cluse Watches</a></li>
+                            <li><a href="#">Diesel Watches</a></li>
+                            <li><a href="#">DKNY Watches</a></li>
+
+                            <li><a href="#">Emporio Armani Watches</a></li>
+                            <li><a href="#">Fossil Watches</a></li>
+                            <li><a href="#">Furla Watches</a></li>
+                          <!-- <li><a href="#">Hamilton Watches</a></li>
+                            <li><a href="#">Hugo Boss Watches</a></li>
+                            <li><a href="#">Ice Watches</a></li>
+                            <li><a href="#">Invicta Watches</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+                <div id="hotro">
+                    <div id="pichotro">
+                        <div class="logohotro">
+                            <img src="../css/images/akmasa.png" title="pichtro" />
+                        </div>
+                        <h3>Hỗ trợ trực tuyến</h3>
+                    </div>
+                    <div class="support">
+                        <div class="text-center">
+                            <p>
+                                <span class="supp-name">Oanh_Thuy</span>
+                                <br />
+                                <span class="phone">0379093280</span>
+                            </p>
+                            <a href="#" class="skype">
+                                <img src="../css/images/skype-icon.png" />
+                            </a>
+                            <a href="#" class="yahoo">
+                                <img src="../css/images/yahoo-icon.png" />
+                            </a>
+                        </div>
+                        <div class="text-center">
+                            <p>
+                                <span class="supp-name">Số hotline</span>
+                                <br />
+                                <span class="phone">0367187573</span>
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <p>
+                                <span class="supp-name">Thời gian làm việc</span>
+                                <br />
+                                <span class="phone">24/24</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="thanhtoan">
+                    <div class="title-thanhtoan">
+                        <a>THÔNG TIN GIAO DỊCH</a>
+                    </div>
+                    <div class="thongtinnganhang">
+                        <div class="nganhang">
+                            <img src="../css/images/nganhang/vietcombank.png" />
+                            <p>
+                                <strong>Ngân hàng Vietcombank</strong>
+                                <br>
+                                Số TK: 0971 00000 8867
+                                <br>
+                                Chủ TK: Hoàng Oanh
+                                <br>
+                                Chi nhánh Nam Hà Nội
+                            </p>
+                        </div>
+                        <div class="nganhang">
+                            <img src="../css/images/nganhang/agribank.png" />
+                            <p>
+                                <strong>Ngân hàng Agribank</strong>
+                                <br>
+                                Số TK: 8809 20504 8998
+                                <br>
+                                Chủ TK: Oanh Hoàng
+                                <br>
+                                Chi nhánh Hà Nội
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <%--<div id="thongketruycap">
+                    <div class="title-thongke">
+                        <a>THỐNG KÊ TRUY CẬP</a>
+                    </div>
+                    <div class="so-thongke">
+                        <p>Đang online: 100000</p>
+                        <p>Lượt truy cập: 1000500</p>
+                        <p>fake nhìn cho ngầu thôi</p>
+                    </div>
+                </div>--%>
+            </div>
+            <div id="trangphai">
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--chân trang-->
+    <div id="footer">
+        <div class="contener">
+            <div class=" menufoter">
+                <p>©2018 Copyright by WatchTime :))</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
