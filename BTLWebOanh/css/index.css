@@ -62,10 +62,9 @@
 .ditmuc{background:#f9dde1;border:1px solid #808080;border-radius:0 0 7px 7px}
 #danhmuc ul{list-style:none;margin:0;padding:0}
 #danhmuc ul li{border-bottom:1px solid #808080;height:35px}
-#danhmuc ul li:hover{background:#f8dde1}
+#danhmuc ul li:hover{background:black}
 #danhmuc ul li a{color:#f75d75;font:bold 15px SFUEurostileCond;line-height:35px;margin-left:15px;text-decoration:none}
 #danhmuc ul li a:hover{color:black}
-
 #hotro{background:#f9dde1;border:1px solid #808080;border-radius:7px;margin-top:15px;overflow:hidden;width:99%}
 #pichotro{overflow:hidden;width:100%}
 .logohotro{background:#f75d75;width:100%}
